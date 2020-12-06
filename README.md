@@ -1,5 +1,5 @@
 # What to Cook
-App to help users decide on a new recipe to try by generating random recipes after sign-up.
+App to help users find a new recipe to try in the kitchen by generating random recipes after sign-up.
 
 ### Page Design
 ##### Inserting background image:
@@ -9,13 +9,13 @@ body {
   background-size: cover;
 } 
 ```
-##### Centering header tag:
+##### Centering header tag in background:
 ```
 h1 {
   color: white;
   text-align: center;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
@@ -24,7 +24,7 @@ h1 {
 ```
 text-align: center;
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
