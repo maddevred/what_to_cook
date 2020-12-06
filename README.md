@@ -9,13 +9,21 @@ body {
   background-size: cover;
 } 
 ```
+<<<<<<< HEAD
 ##### Centering header tag:
+=======
+##### Centering header tag in background:
+>>>>>>> 563b8fc38676bfe18fc5489661652228a6687080
 ```
 h1 {
   color: white;
   text-align: center;
   position: absolute;
+<<<<<<< HEAD
   top: 50%;
+=======
+  top: 40%;
+>>>>>>> 563b8fc38676bfe18fc5489661652228a6687080
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
@@ -24,7 +32,11 @@ h1 {
 ```
 text-align: center;
   position: absolute;
+<<<<<<< HEAD
   top: 60%;
+=======
+  top: 50%;
+>>>>>>> 563b8fc38676bfe18fc5489661652228a6687080
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
@@ -52,3 +64,7 @@ app.get('/', function(req, res) {
 ```
 
 *** ADD TO THIS!!! NEEDS SEND INFO!!! ***
+<<<<<<< HEAD
+=======
+
+>>>>>>> 563b8fc38676bfe18fc5489661652228a6687080
