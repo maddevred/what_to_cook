@@ -1,16 +1,38 @@
-# Express Authentication
+# What to Cook
+App to help users decide on a new recipe to try by generating random recipes after sign-up.
 
-Express authentication template using Passport + flash messages + custom middleware
+## Page Design
+##### Inserting background image:
+``` 
+body {
+  background-image: url("https://www.aafoodservice.com/wp-content/themes/custom-theme/img/slider-v1704.jpg");
+  background-size: cover;
+} 
+```
 
-## What it includes
+##### Centering header tag:
+```
+h1 {
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+```
 
-* Sequelize user model / migration
-* Settings for PostgreSQL
-* Passport and passport-local for authentication
-* Sessions to keep user logged in between pages
-* Flash messages for errors and successes
-* Passwords that are hashed with BCrypt
-* EJS Templating and EJS Layouts
+##### Adding subheader BELOW header tag:
+```
+text-align: center;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+```
+
+
 
 ### User Model
 
