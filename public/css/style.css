@@ -1,9 +1,32 @@
 nav ul li {
   text-decoration: none;
   display: inline-block;
-  margin-right: .3em;
+  text-align: center;
+  font-size: 30px;
 }
-
 h1 {
-  color: chartreuse;
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-size: 75px;
+  
+}
+h2 {
+  color: white;
+  text-align: center;
+  text-align: center;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+}
+body {
+  background-image: url("https://www.aafoodservice.com/wp-content/themes/custom-theme/img/slider-v1704.jpg");
+  background-size: cover;
 }
