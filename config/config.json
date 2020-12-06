@@ -1,16 +1,22 @@
 {
   "development": {
-    "database": "express_auth_development",
+    "username": "root",
+    "password": "open",
+    "database": "what_to_cook_development",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "database": "express_auth_test",
+    "username": "root",
+    "password": "open",
+    "database": "what_to_cook_test",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
-    "database": "express_auth_production",
+    "username": "root",
+    "password": "open",
+    "database": "what_to_cook_production",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }
