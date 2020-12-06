@@ -3,6 +3,7 @@ const router = express.Router();
 const db = require('../models');
 const passport = require('../config/ppConfig');
 
+
 passport
 
 router.get('/signup', (req, res) => {
@@ -30,18 +31,18 @@ router.post('/signup', (req, res) => {
       // Flash Message
       const successObject = {
         successRedirect: '/',
-        successFlash: 'Account created and logging in...'
+        successFlash: 'Successfully created and logging into account...'
       }
       passport.authenticate('local', successObject)(req, res);
     } else {
       // Email already exists
-      req.flash('error', 'Email already exists...')
+      req.flash('error', 'This email is already being used for an existing account.')
       res.redirect('/auth/signup');
     }
   })
   .catch(err => {
     console.log('Error', err);
-    req.flash('error', 'Either email or password is incorrect. Please try again.');
+    req.flash('error', 'Either email or password entered is incorrect. Please try again.');
     res.redirect('/auth/signup');
   })
 });
@@ -50,12 +51,12 @@ router.post('/login', passport.authenticate('local', {
   successRedirect: '/',
   failureRedirect: '/auth/login',
   successFlash: 'Welcome back...',
-  failureFlash: 'Either email or password is incorrect. Please try again.'
+  failureFlash: 'Either email or password entered is incorrect. Please try again.'
 }));
 
 router.get('/logout', (req, res) => {
   req.logOut();
-  req.flash('success', 'Logging out... See you soon.');
+  req.flash('success', 'Logging out. See you soon!');
   res.redirect('/');
 });
 

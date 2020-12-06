@@ -1,4 +1,5 @@
 require('dotenv').config();
+const axios = require('axios');
 const express = require('express');
 const layouts = require('express-ejs-layouts');
 const session = require('express-session');
@@ -29,6 +30,7 @@ const sessionObject = {
 
 app.use(session(sessionObject));
 
+
 // Initialize passport and run through middleware
 app.use(passport.initialize());
 app.use(passport.session());
@@ -45,10 +47,19 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get('/', (req, res) => {
+app.get('/', function(req, res) {
+  
+  axios.get('https://www.themealdb.com/api/json/v1/1/random.php')
+    .then(function (response) {
+      // handle success
+      console.log(response.data);
+    })
+
   console.log(res.locals.alerts);
   res.render('index', { alerts: res.locals.alerts });
 });
+
+
 
 app.get('/profile', isLoggedIn, (req, res) => {
   res.render('profile');
@@ -59,7 +70,7 @@ app.use('/auth', require('./routes/auth'));
 
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {
-  console.log(`🎧 You're listening to the smooth sounds of port ${PORT} 🎧`);
+  console.log(`🎧 Your server is now running! Open local host ${PORT} to view! 🎧`);
 });
 
 module.exports = server;
