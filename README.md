@@ -47,4 +47,9 @@ app.get('/', function(req, res) {
 });
 ```
 
-ADD TO THIS!!! NEEDS SEND INFO!!!
+*** ADD TO THIS!!! NEEDS SEND INFO!!! ***
+
+### Where I got my API information from 
+##### Database: https://www.themealdb.com/
+
+##### API: https://www.themealdb.com/api.php
