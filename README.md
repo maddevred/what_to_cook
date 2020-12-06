@@ -9,7 +9,6 @@ body {
   background-size: cover;
 } 
 ```
-
 ##### Centering header tag:
 ```
 h1 {
@@ -21,7 +20,6 @@ h1 {
   margin-right: -50%;
   transform: translate(-50%, -50%);
 ```
-
 ##### Adding subheader BELOW header tag:
 ```
 text-align: center;
@@ -32,7 +30,13 @@ text-align: center;
   transform: translate(-50%, -50%);
 ```
 
-### Get and Send API data to host server
+### API information
+##### Database: 
+https://www.themealdb.com/
+##### API: 
+https://www.themealdb.com/api.php
+
+### Get and Send API data to app
 ```
 app.get('/', function(req, res) {
   
@@ -49,7 +53,3 @@ app.get('/', function(req, res) {
 
 *** ADD TO THIS!!! NEEDS SEND INFO!!! ***
 
-### Where I got my API information from 
-##### Database: https://www.themealdb.com/
-
-##### API: https://www.themealdb.com/api.php
