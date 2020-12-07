@@ -24,16 +24,16 @@ https://www.themealdb.com/api.php
 ### Get and Send API data to app
 ```
 app.get('/', function(req, res) {
-  
+  if (req.user) {
   axios.get('https://www.themealdb.com/api/json/v1/1/random.php')
     .then(function (response) {
-      // handle success
-      console.log(response.data);
+      console.log(JSON.stringify(response.data.meals[0]));
+      res.render("recipes", {
+        recipe: response.data.meals[0]
+      })
+      console.log(typeof response.data);
     })
-
-  console.log(res.locals.alerts);
-  res.render('index', { alerts: res.locals.alerts });
+  }  
+  else res.render('index', { alerts: res.locals.alerts });
 });
 ```
-
-*** ADD TO THIS!!! NEEDS SEND INFO!!! ***
