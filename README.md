@@ -9,26 +9,11 @@ body {
   background-size: cover;
 } 
 ```
-##### Centering header tag in background:
-```
-h1 {
-  color: white;
-  text-align: center;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-```
-##### Adding subheader BELOW header tag:
-```
-text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-```
+
+### File Installation (Linux Terminal)
+*sudo npm install -g sequelize*
+*sudo npm install -g sequelize-cli*
+*sudo npm install -g pg*
 
 ### API information
 ##### Database: 
