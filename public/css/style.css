@@ -18,3 +18,7 @@ body {
   background-image: url("https://cdn.vox-cdn.com/thumbor/UWJ3mH6Sr7gpFD0ug-am0NUKUhQ=/0x0:3500x2333/1200x0/filters:focal(0x0:3500x2333):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/22048486/Seasons_52_Thanksgiving_Dinner.jpg");
   background-size: cover;
 }
+p {
+  color: black;
+  font-size: 20px;
+}
