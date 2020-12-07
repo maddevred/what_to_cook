@@ -22,7 +22,7 @@ https://www.themealdb.com/
 https://www.themealdb.com/api.php
 
 ### Get and Send API data to app
-```
+``` js
 app.get('/', function(req, res) {
   if (req.user) {
   axios.get('https://www.themealdb.com/api/json/v1/1/random.php')
