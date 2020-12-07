@@ -8,8 +8,8 @@ const flash = require('connect-flash');
 const SECRET_SESSION = process.env.SECRET_SESSION;
 const app = express();
 
-// isLoggedIn middleware
 const isLoggedIn = require('./middleware/isLoggedIn');
+const db = require('./models');
 
 app.set('view engine', 'ejs');
 
@@ -17,10 +17,6 @@ app.use(require('morgan')('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(__dirname + '/public'));
 app.use(layouts);
-
-// secret: What we actually will be giving the user on our site as a session cookie
-// resave: Save the session even if it's modified, make this false
-// saveUninitialized: If we have a new session, we save it, therefore making that true
 
 const sessionObject = {
   secret: SECRET_SESSION,
@@ -30,18 +26,12 @@ const sessionObject = {
 
 app.use(session(sessionObject));
 
-
-// Initialize passport and run through middleware
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Flash
-// Using flash throughout app to send temp messages to user
 app.use(flash());
 
-// Messages that will be accessible to every view
 app.use((req, res, next) => {
-  // Before every route, we will attach a user to res.local
   res.locals.alerts = req.flash();
   res.locals.currentUser = req.user;
   next();
@@ -51,9 +41,12 @@ app.get('/', function(req, res) {
   
   axios.get('https://www.themealdb.com/api/json/v1/1/random.php')
     .then(function (response) {
-      // handle success
-      console.log(response.data);
+      res.render("recipes", {
+        recipe: response.data.meals
+      })
+      console.log(typeof response.data);
     })
+
 
   console.log(res.locals.alerts);
   res.render('index', { alerts: res.locals.alerts });
