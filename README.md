@@ -11,9 +11,9 @@ body {
 ```
 
 ### File Installation (Linux Terminal)
-*sudo npm install -g sequelize*
-*sudo npm install -g sequelize-cli*
-*sudo npm install -g pg*
+*sudo npm install -g sequelize*<br>
+*sudo npm install -g sequelize-cli*<br>
+*sudo npm install -g pg*<br>
 
 ### API information
 ##### Database: 
