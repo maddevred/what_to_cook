@@ -1,31 +1,20 @@
+h1 {
+  color: black;
+  text-align: left;
+  font-size: 75px;
+}
 nav ul li {
   text-decoration: none;
   display: inline-block;
   text-align: center;
   font-size: 30px;
 }
-h1 {
-  color: white;
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  font-size: 75px;
-  
-}
 h2 {
-  color: white;
-  text-align: center;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
+  color: black;
+  text-align: left;
   font-size: 30px;
 }
 body {
-  background-image: url("https://www.aafoodservice.com/wp-content/themes/custom-theme/img/slider-v1704.jpg");
+  background-image: url("https://cdn.vox-cdn.com/thumbor/UWJ3mH6Sr7gpFD0ug-am0NUKUhQ=/0x0:3500x2333/1200x0/filters:focal(0x0:3500x2333):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/22048486/Seasons_52_Thanksgiving_Dinner.jpg");
   background-size: cover;
 }
