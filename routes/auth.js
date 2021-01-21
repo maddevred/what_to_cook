@@ -3,9 +3,6 @@ const router = express.Router();
 const db = require('../models');
 const passport = require('../config/ppConfig');
 
-const recipes = db.recipes;
-
-
 passport
 
 router.get('/signup', (req, res) => {
@@ -28,16 +25,13 @@ router.post('/signup', (req, res) => {
   })
   .then(([user, created]) => {
     if (created) {
-      // if created, success and redirect back to home
       console.log(`${user.name} was created`);
-      // Flash Message
       const successObject = {
         successRedirect: '/',
         successFlash: 'Successfully created and logging into account...'
       }
       passport.authenticate('local', successObject)(req, res);
     } else {
-      // Email already exists
       req.flash('error', 'This email is already being used for an existing account.')
       res.redirect('/auth/signup');
     }
@@ -62,8 +56,4 @@ router.get('/logout', (req, res) => {
   res.redirect('/');
 });
 
-
-
 module.exports = router;
-
-

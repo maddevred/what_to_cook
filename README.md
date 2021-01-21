@@ -5,9 +5,9 @@ App to help users find a new recipe to try in the kitchen by generating random r
 ##### Inserting background image:
 ``` 
 body {
-  background-image: url("https://www.aafoodservice.com/wp-content/themes/custom-theme/img/slider-v1704.jpg");
+  background-image: url("https://i.dietdoctor.com/wp-content/uploads/2016/08/14-day-meal-plan-presentation-16-9.jpg?auto=compress%2Cformat&w=1600&h=900&fit=crop");
   background-size: cover;
-} 
+}
 ```
 
 ### File Installation (Linux Terminal)
@@ -23,7 +23,7 @@ https://www.themealdb.com/api.php
 
 ### Get and Send API data to app
 ``` js
-app.get('/', function(req, res) {
+app.get('/',isLoggedIn, function(req, res) {
   if (req.user) {
   axios.get('https://www.themealdb.com/api/json/v1/1/random.php')
     .then(function (response) {
@@ -36,4 +36,9 @@ app.get('/', function(req, res) {
   }  
   else res.render('index', { alerts: res.locals.alerts });
 });
+```
+
+### Pass Random Recipe to App
+``` ejs
+<pre><%= JSON.stringify(recipe) %></pre>
 ```

@@ -1,15 +1,10 @@
 'use strict';
-const bcrypt = require('bcrypt'); // Making a hash password for the user
+const bcrypt = require('bcrypt'); // making a hash password for the user
 const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class user extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
     static associate(models) {
       // define association here
     }
@@ -47,9 +42,9 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   user.addHook('beforeCreate', function(pendingUser) {
-    // Bcrypt hash a password for us
+    // bcrypt hash a password for us
     let hash = bcrypt.hashSync(pendingUser.password, 12);
-    // Set password to equal the hash
+    // set password to equal the hash
     pendingUser.password = hash;
     console.log(pendingUser);
   });
@@ -61,7 +56,7 @@ module.exports = (sequelize, DataTypes) => {
     return correctPassword;
   }
   
-  // Remove the password before it gets serialized 
+  // remove the password before it gets serialized 
   user.prototype.toJSON = function() {
     console.log('Inside of the toJSON method');
     let userData = this.get();
