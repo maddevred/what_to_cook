@@ -18,8 +18,8 @@ describe('Creating a User', function() {
     }).catch(function(error) {
       done(error);
     });
-  });
-
+  }); 
+  
   it('should throw an error on invalid email addresses', function(done) {
     db.user.create({
       email: 'test',
